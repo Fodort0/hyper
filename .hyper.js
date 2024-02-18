@@ -75,6 +75,7 @@ module.exports = {
 			limeGreen: "#32CD32",
 			lightCoral: "#F08080",
 		},
+		opacity: 0.85,
 		// the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
 		// if left empty, your system's login shell will be used by default
 		//
@@ -138,14 +139,37 @@ module.exports = {
 	//   `hyperpower`
 	//   `@company/project`
 	//   `project#1.0.1`
-	plugins: ["hyper-pane"],
+	plugins: ["hyper-pane", "hyper-opacity"],
+	paneNavigation: {
+		debug: false,
+		hotkeys: {
+			navigation: {
+				up: "ctrl+shift+k",
+				down: "ctrl+shift+j",
+				left: "ctrl+shift+h",
+				right: "ctrl+shift+l",
+			},
+			jump_prefix: "ctrl+shift",
+			permutation_modifier: "alt",
+			maximize: "ctrl+shift+enter",
+		},
+		showIndicators: true,
+		indicatorPrefix: "",
+		indicatorStyle: {
+			position: "absolute",
+			top: "999px",
+			left: "999px",
+			fontSize: "0px",
+		},
+		focusOnMouseHover: false,
+		inactivePaneOpacity: 0.8,
+	},
 	// in development, you can create a directory under
 	// `~/.hyper_plugins/local/` and include it here
 	// to load it and avoid it being `npm install`ed
 	localPlugins: [],
 	keymaps: {
-		// Example
-		// 'window:devtools': 'cmd+alt+o',
+		// Example keymap configurations
 		"editor:paste": "ctrl+v",
 		"editor:selectAll": "ctrl+a",
 	},
