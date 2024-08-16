@@ -11,7 +11,7 @@ module.exports = {
 		fontSize: 15,
 		// font family with optional fallbacks
 		fontFamily:
-			'Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+			'-apple-system, BlinkMacSystemFont, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 		// default font weight: 'normal' or 'bold'
 		fontWeight: "normal",
 		// font weight for bold characters: 'normal' or 'bold'
@@ -21,7 +21,7 @@ module.exports = {
 		// letter spacing as a relative unit
 		letterSpacing: 0,
 		// terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-		cursorColor: "rgba(178, 155, 94, 0.9)",
+		cursorColor: "#ffc4c7",
 		// terminal text color under BLOCK cursor
 		cursorAccentColor: "#000",
 		// `'BEAM'` for |, `'UNDERLINE'` for _, `'BLOCK'` for █
@@ -29,12 +29,12 @@ module.exports = {
 		// set to `true` (without backticks and without quotes) for blinking cursor
 		cursorBlink: false,
 		// color of the text
-		foregroundColor: "#cdcecf",
+		foregroundColor: "#e0def4",
 		// terminal background color
 		// opacity is only supported on macOS
-		backgroundColor: "#192330",
+		backgroundColor: "#242137",
 		// terminal selection color
-		selectionColor: "rgba(51, 70, 97,0.3)",
+		selectionColor: "rgba(56, 52, 79,0.7)",
 		// border color (window, tabs)
 		borderColor: "#192330",
 		// custom CSS to embed in the main window
@@ -58,19 +58,19 @@ module.exports = {
 		colors: {
 			black: "#000000",
 			red: "#C51E14",
-			green: "#cdcecf",
+			green: "#ffc4c7",
 			yellow: "#cdcecf",
 			blue: "#0A2FC4",
-			magenta: "#b29b5e",
+			magenta: "#b29bff",
 			cyan: "#20C5C6",
 			white: "#C7C7C7",
 			lightBlack: "#686868",
 			lightRed: "#FD6F6B",
-			lightGreen: "#67F86F",
-			lightYellow: "#FFFA72",
-			lightBlue: "#6A76FB",
+			lightGreen: "#eb6f92",
+			lightYellow: "#eb6f92",
+			lightBlue: "#f6c177",
 			lightMagenta: "#FD7CFC",
-			lightCyan: "#68FDFE",
+			lightCyan: "#c4a7e7",
 			lightWhite: "#FFFFFF",
 			limeGreen: "#32CD32",
 			lightCoral: "#F08080",
@@ -139,7 +139,12 @@ module.exports = {
 	//   `hyperpower`
 	//   `@company/project`
 	//   `project#1.0.1`
-	plugins: ["hyper-pane", "hyper-opacity"],
+	plugins: [
+		"hyper-pane",
+		"hyper-opacity",
+		"hyper-search",
+		"hyper-fading-scrollbar",
+	],
 	paneNavigation: {
 		debug: false,
 		hotkeys: {
