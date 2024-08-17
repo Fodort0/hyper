@@ -8,10 +8,10 @@ module.exports = {
 		// or `'canary'` for less polished but more frequent updates
 		updateChannel: "stable",
 		// default font size in pixels for all tabs
-		fontSize: 15,
+		fontSize: 14.4,
 		// font family with optional fallbacks
-		fontFamily:
-			'-apple-system, BlinkMacSystemFont, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+		fontFamily: '"JetBrainsMono Nerd Font", monospace',
+
 		// default font weight: 'normal' or 'bold'
 		fontWeight: "normal",
 		// font weight for bold characters: 'normal' or 'bold'
@@ -22,8 +22,10 @@ module.exports = {
 		letterSpacing: 0,
 		// terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
 		cursorColor: "#ffc4c7",
+		appTitle: "This",
 		// terminal text color under BLOCK cursor
 		cursorAccentColor: "#000",
+
 		// `'BEAM'` for |, `'UNDERLINE'` for _, `'BLOCK'` for █
 		cursorShape: "BEAM",
 		// set to `true` (without backticks and without quotes) for blinking cursor
@@ -38,8 +40,34 @@ module.exports = {
 		// border color (window, tabs)
 		borderColor: "#192330",
 		// custom CSS to embed in the main window
-		css: "",
-		// custom CSS to embed in the terminal window
+
+		css: `
+		.header_appTitle {
+			display: none; 
+			
+		}
+
+		.header_windowHeader::before {
+			content: "ftamas"; 
+			font-size: 14px;   
+			color: #c4a7e7;     
+			font-weight: 500;
+			fontFamily: '"JetBrainsMono Nerd Font", monospace';
+			font-style: oblique;
+			
+		}
+
+		.header_windowHeader::after {
+			fontFamily: '"JetBrainsMono Nerd Font", monospace';
+			font-style: oblique; 
+			content: "@Tommy";   
+			font-size: 14px;    
+			color:#9ccfd8;      
+			margin-left: 0px; 
+			font-weight: 500;  
+		}
+    `,
+
 		termCSS: "",
 		// set custom startup directory (must be an absolute path)
 		workingDirectory: "",
@@ -72,7 +100,7 @@ module.exports = {
 			lightMagenta: "#FD7CFC",
 			lightCyan: "#c4a7e7",
 			lightWhite: "#FFFFFF",
-			limeGreen: "#32CD32",
+			limeGreen: "#8cb04e",
 			lightCoral: "#F08080",
 		},
 		opacity: 0.85,
